@@ -1,0 +1,483 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset CSS */
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Wrapper */
+
+:root {
+  /* Colors */
+  --primary: #000;
+  --sub-primary: #fff;
+  --secondary: #fe4e30;
+  --sub-secondary: #000;
+  --tertiary: #000;
+  --sub-tertiary: #000;
+}
+
+
+.bg-wrapper {
+  padding: 124px 0;
+  /* height: 100%; */
+}
+
+@media (min-width: 1024px) {
+  .bg-wrapper {
+    padding: 148px 24px;
+    height: 100vh;
+    object-fit: cover;
+    background-image: linear-gradient(to bottom, #fe4e30, #e0256d);
+  }
+}
+
+/* --- Shape Start --- */
+
+.rounded {
+  border-radius: .75rem;
+}
+
+.rounded-full {
+  border-radius: 99rem !important;
+}
+
+/* --- Shape Stop --- */
+
+
+
+/* --- Header Start --- */
+
+
+.header {
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(24px);
+}
+
+.header-wrapper {
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 1280px;
+  display: flex;
+}
+
+.header-logo {
+  width: 72px;
+}
+
+.header-logo>img {
+  width: 100%;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-nav__left {
+  gap: 24px;
+  font-size: 1rem;
+}
+
+.header-nav__left>li {
+  list-style: none;
+}
+
+@media (min-width: 1024px) {
+  .header-logo {
+    margin-right: 48px;
+  }
+
+  .header-nav__left {
+    display: flex;
+    gap: 24px;
+    font-size: 1.25rem;
+  }
+}
+
+/* --- Header Stop --- */
+
+
+/* --- Container Start --- */
+.container-sm {
+  max-width: 640px;
+  margin: auto;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* --- Container Stop --- */
+
+.shadow-lg {
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.35);
+}
+
+.card-fit {
+  width: fit-content;
+}
+
+/* --- Card Start --- */
+.card {
+  padding: 12px;
+  border-radius: 0;
+  background-color: white;
+}
+
+.card-wrapper {
+  padding: 1rem;
+  transition: all 500ms ease-in-out;
+}
+
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.card-head {}
+
+.card-body {
+  font-weight: 500;
+  transition: all 500ms ease-in-out;
+}
+
+.card-body__split {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+
+.card-desc {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+.card-body__split-full {
+  width: 100%;
+}
+
+.card-body__split-fit {
+  width: 100%;
+}
+
+/* Card Split - Responsive Media */
+@media (min-width: 1024px) {
+  .card {
+    border-radius: 24px;
+  }
+
+  .card-wrapper {
+    padding: 2.75rem;
+  }
+
+  .card-body {
+    /* border-radius: 24px; */
+  }
+
+  .card-body__split {
+    flex-direction: row;
+  }
+
+  .card-body__split-full {
+    width: 100%;
+  }
+
+  .card-body__split-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .card-desc {
+    font-size: 1.15rem;
+    line-height: 1.75rem;
+  }
+}
+
+/* Card - Responsive Media */
+@media (min-width: 1024px) {
+  .card-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* --- Card Stop --- */
+
+
+/* --- Link Start --- */
+
+.link {
+  transition: 100ms ease-in-out;
+}
+
+.link:hover {
+  font-weight: 600;
+  color: #fe4e30;
+}
+
+.link-active {
+  font-weight: 600;
+  color: #fe4e30;
+}
+
+/* --- Link Stop --- */
+
+
+/* --- Button Start --- */
+.btn-group {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 40px auto 0 auto;
+  flex-direction: column;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: .5rem 1.5rem;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.btn-lg {
+  padding: .75rem 3rem;
+
+}
+
+.btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--sub-primary);
+  border: .5px solid #000;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary);
+  border: .5px solid #000;
+  font-weight: 600;
+}
+
+.btn-active {
+  background-color: var(--secondary);
+  color: var(--sub-secondary);
+  font-weight: 600;
+  border: .5px solid var(--secondary);
+}
+
+.btn-transparent {
+  gap: 12px;
+  color: var(--primary);
+  background-color: transparent;
+  border: .5px solid rgba(0, 0, 0, 0);
+}
+
+.btn-transparent:hover {
+  background-color: var(--primary);
+  color: var(--sub-primary);
+  border-radius: 99rem;
+  border: .5px solid #000;
+}
+
+.btn-transparent__svg {
+  height: 28px;
+  width: 28px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  stroke: currentColor;
+}
+
+/* Social Icon - Responsive Media */
+@media (min-width: 1024px) {
+
+  .btn-group {
+    margin: 40px 0 0 0;
+    flex-direction: unset;
+  }
+}
+
+/* --- Button Stop --- */
+
+
+/* --- Social Icon Start --- */
+.social-icon__wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.social-icon {
+  padding: 8px;
+  border-radius: 99rem;
+  background-color: var(--primary);
+  color: var(--sub-primary);
+  text-decoration: none;
+  display: inline-flex;
+  border: .5px solid #000;
+}
+
+.social-icon:hover {
+  transition: 200ms ease-in-out;
+}
+
+.social-icon__svg {
+  height: 28px;
+  width: 28px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  stroke: currentColor;
+}
+
+#linkedin:hover {
+  background-color: #0b67c3;
+  border: .5px solid #0b67c3;
+}
+
+#instagram:hover {
+  background-color: #e0256d;
+  border: .5px solid #e0256d;
+}
+
+#facebook:hover {
+  background-color: #0b61ff;
+  border: .5px solid #0b61ff;
+}
+
+#twitter:hover {
+  background-color: #1bbbff;
+  border: .5px solid #1bbbff;
+}
+
+#github:hover {
+  background-color: #ffffff;
+  color: #000;
+  border: .5px solid #000;
+}
+
+#personalweb:hover {
+  background-color: #3a3a3a;
+  border: .5px solid #3a3a3a;
+}
+
+/* Social Icon - Responsive Media */
+@media (min-width: 1024px) {
+  .social-icon__wrapper {
+    justify-content: start;
+  }
+}
+
+/* --- Social Icon Stop --- */
+
+.form-wrapper {
+  margin: 0 auto;
+  max-width: 520px;
+}
+
+.form {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: row;
+}
+
+.form-input {
+  width: 100%;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: end;
+}
+
+.form-input>label {
+  font-weight: 700;
+}
+
+.form-input>input,
+select,
+textarea {
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  border: 2px solid rgb(223, 223, 223);
+  /* border: none; */
+  background-color: #f7f7f7;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-input>input:hover,
+select:hover,
+textarea:hover {
+  border: 2px solid #000;
+}
+
+.form-input>input:focus,
+select:focus,
+textarea:focus {
+  background-color: #ffd8d1;
+}
+
+.form-input>input {
+  height: 32px;
+}
+
+.form-input>select {
+  height: 48px;
+}
+
+.form-input>textarea {
+  padding: 1rem;
+}
+
+.form-input>button {
+  flex-grow: unset;
+}
+
+.form-input__error {
+  color: #e0256d;
+}

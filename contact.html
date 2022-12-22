@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch 43 - Day 4 | Wahyudi Chrisdianto</title>
+  <link rel="preload" href="assets/css/app.css" as="style">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-wrapper">
+      <div class="header-logo"><img src="assets/img/logo-DW.webp" alt="Dumbways Logo"></div>
+      <div class="header-nav">
+        <ul class="header-nav__left">
+          <li>
+            <a href="index.html" class="link">Home</a>
+          </li>
+          <li>
+            <a href="blog.html" class="link">My Project</a>
+          </li>
+          <li>
+            <a href="project.html" class="link">Blog</a>
+          </li>
+        </ul>
+        <div class="header-nav__right">
+          <a href="contact.html" class="btn btn-primary btn-active">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="bg-wrapper">
+    <div class=" container-sm">
+      <div class="card">
+        <div class="card-wrapper">
+          <h1 class="card-title">Get In Touch</h1>
+          <div class="card-body">
+            <form action="" class="form-group">
+              <div class="form-input">
+                <label for="f-name">Name</label>
+                <input id="f-name" type="text" class="input">
+              </div>
+              <div class="form-input">
+                <label for="f-email">Email</label>
+                <input id="f-email" type="email" class="input">
+              </div>
+              <div class="form-input">
+                <label for="f-phone">Phone Number</label>
+                <input id="f-phone" type="text" class="input">
+              </div>
+              <div class="form-input">
+                <label for="f-subject">Subject</label>
+                <select id="f-subject" class="select">
+                  <option value="Opsi 1">Collaborate</option>
+                  <option value="Opsi 2">Job Offering</option>
+                  <option value="Opsi 3">Other</option>
+                </select>
+              </div>
+              <div class="form-input">
+                <label for="f-message">Your Message</label>
+                <textarea id="f-message" name="f-message" id="" cols="30" rows="8" class="textarea"></textarea>
+              </div>
+              <div class="form-submit" style="">
+                <button class="btn btn-primary btn-lg rounded-full" type="button" onclick="submitData()">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="assets/js/contact.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch 43 - Day 4 | Wahyudi Chrisdianto</title>
+  <link rel="preload" href="assets/css/app.css" as="style">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/project.css">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="assets/css/profile.css"> -->
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-wrapper">
+      <div class="header-logo"><img src="assets/img/logo-DW.webp" alt="Dumbways Logo"></div>
+      <div class="header-nav">
+        <ul class="header-nav__left">
+          <li>
+            <a href="index.html" class="link">Home</a>
+          </li>
+          <li>
+            <a href="project.html" class="link link-active">My Project</a>
+          </li>
+          <!-- <li>
+            <a href="blog.html" class="link">Blog</a>
+          </li> -->
+        </ul>
+        <div class="header-nav__right">
+          <a href="contact.html" class="btn btn-primary">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="bg-wrapper">
+    <div class="container-sm">
+      <!-- <div class="card container"> -->
+      <div class="card">
+        <div class="card-wrapper ">
+          <h1 class="card-title">Add New Blog</h1>
+          <div class="card-body">
+            <form onsubmit="getData(event)" class="form">
+              <label class="form-input">Project Name
+                <input id="project-name" type="text" class="input">
+              </label>
+              <div class="form-group">
+                <label class="form-input">Start Date
+                  <input id="project-start" type="date" class="input"></label>
+                <label class="form-input">End Date
+                  <input id="project-end" type="date" class="input"></label>
+              </div>
+              <label class="form-input">Description
+                <textarea id="project-description" cols="30" rows="8" class="textarea"></textarea>
+              </label>
+              <div class="form-group__choice">
+                <h3 style="width: 100%; ">Technologies</h3>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox-input" name="project-tech" id="nodejs" value="Node JS">
+                  <span class="checkbox-tile">
+                    <img src="assets/img/icon/logo-nodejs.svg" alt="Item Icon">
+                    <span>Node JS</span>
+                  </span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox-input" name="project-tech" id="nextjs" value="Next JS">
+                  <span class="checkbox-tile">
+                    <img src="assets/img/icon/logo-nextjs.svg" alt="Item Icon">
+                    <span>Next JS</span>
+                  </span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox-input" name="project-tech" id="reactjs" value="React JS">
+                  <span class="checkbox-tile">
+                    <img src="assets/img/icon/logo-react.svg" alt="Item Icon">
+                    <span>React JS</span>
+                  </span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox-input" name="project-tech" id="typescript" value="Typescript">
+                  <span class="checkbox-tile">
+                    <img src="assets/img/icon/logo-ts.svg" alt="Item Icon">
+                    <span>Typescript</span>
+                  </span>
+                </label>
+              </div>
+              <label class="form-input">Upload Image
+                <input id="project-image" type="file" class="input">
+              </label>
+              <div class="form-submit">
+                <button class="btn btn-primary btn-lg rounded-full">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class=""></div>
+
+    </div>
+  </section>
+
+  <footer class="">
+    <div>
+      <p style="text-align: center;">Made with ❤️ by <i>Hyujisf</i></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/project.js"></script>
+</body>
+
+</html>
