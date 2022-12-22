@@ -34,7 +34,7 @@ a {
 @media (min-width: 1024px) {
   .bg-wrapper {
     padding: 148px 24px;
-    height: 100vh;
+    min-height: 100vh;
     object-fit: cover;
     background-image: linear-gradient(to bottom, #fe4e30, #e0256d);
   }
