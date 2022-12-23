@@ -153,7 +153,21 @@ a {
   margin-bottom: 20px;
 }
 
-.card-head {}
+.card-title__sm {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+.card-subtitle__sm {
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+.card-body {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
 
 .card-body {
   font-weight: 500;
@@ -171,6 +185,12 @@ a {
   text-align: justify;
   font-size: 1rem;
   line-height: 1.75rem;
+}
+
+.card-desc {
+  text-align: justify;
+  font-size: .75rem;
+  line-height: 1.25rem;
 }
 
 .card-body__split-full {
@@ -266,6 +286,12 @@ a {
 
 .btn-lg {
   padding: .75rem 3rem;
+
+}
+
+.btn-sm {
+  padding: .175rem 2.5rem;
+  /* font-size: .75rem; */
 
 }
 
