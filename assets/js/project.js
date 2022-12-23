@@ -27,7 +27,7 @@ function getData(event) {
     }
   }
 
-  // console.log(projectName, projectStart, projectEnd, projectDesc, techChecked)
+  console.log(projectName, projectStart, projectEnd, projectDesc, techChecked)
 
   let addProject = {
     projectName,
@@ -46,27 +46,44 @@ function getData(event) {
 function showData() {
   document.getElementById("list-content").innerHTML = ""
 
-  for (let i = 0; i <= dataProject.length; i++) {
-    document.getElementById("list-content").innerHTML += `
-    <div class="card" style="">
+
+  for (let i = 0; i < dataProject.length; i++) {
+    listContent = document.getElementById('list-content')
+
+    listContent.innerHTML += `
+    <div class="card card-post">
         <img src="${dataProject[i].projectImage}" alt="">
         <div class="card-body">
-          <div>
-            <h1>${dataProject[i].projectName}</h1>
-            <span>Durasi: 3Bulan</span>
+          <div class="card-head">
+            <h1 class="card-title__sm">${dataProject[i].projectName}</h1>
+            <span class="card-subtitle__sm">Durasi: 3Bulan</span>
           </div>
-          <p>${dataProject[i].projectDesc}</p>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+          <div class="card-body">
+          <p class="card-desc_sm">${dataProject[i].projectDesc}</p>
+          <ul class="list-items">
+            ${(function icon() {
+        let string = ""
+        for (let j = 0; j < dataProject[i].techChecked.length; j++) {
+          string += `<li><img src="assets/img/icon/logo-${dataProject[i].techChecked[j]}.svg" alt="Item Icon"></li>`
+        }
+        return string
+      })()}
           </ul>
-          <div>
-            <a href="#">Edit</a><a href="#">Delete</a>
-          </div>
+        <div class="btn-group">
+          <a class="btn btn-primary btn-sm" href="#">Edit</a><a class="btn btn-outline btn-sm" href="#">Delete</a>
+        </div>
         </div>
       </div>
-      `
+    </div>
+    `
   }
 }
+
+
+// function listTech(tectName) {
+//   for (let i = 0; i < tectName.length; i++) {
+
+//     ???.innerHTML += `<li><img src="assets/img/icon/logo-${tectName[i]}.svg" alt="Item Icon"></li>`
+
+//   }
+// }
