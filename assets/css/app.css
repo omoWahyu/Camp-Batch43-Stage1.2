@@ -283,9 +283,9 @@ a {
 }
 
 .btn-primary:hover {
-  background-color: transparent;
+  background-color: #ffa33c;
   color: var(--primary);
-  border: .5px solid #000;
+  border: .5px solid #ffa33c;
   font-weight: 600;
 }
 

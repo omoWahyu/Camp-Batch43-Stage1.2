@@ -25,6 +25,7 @@
   transition: 0.15s ease;
   cursor: pointer;
   position: relative;
+  font-weight: 600;
   padding: 20px;
   outline: 2px solid #f3f5f9;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
@@ -45,13 +46,14 @@
   border-radius: 16px;
   position: absolute;
   white-space: nowrap;
-  outline: 2px solid #f2230c80;
-  box-shadow: 0 0 8px rgba(242, 35, 12, 0.5);
+  outline: 2px solid #ffa33c;
+  box-shadow: 0 0 8px rgba(#ffa33c, 0.5);
 }
 
 .checkbox-input:checked+.checkbox-tile {
-  outline: 2px solid #f2230c80;
-  box-shadow: 0 0 8px rgba(242, 35, 12, 0.5);
+  background-color: #ffa33c;
+  outline: 2px solid #ffa33c;
+  box-shadow: 0 0 8px rgba(#ffa33c, 0.5);
   flex: 0 1 auto;
   display: flex;
   text-align: center;
@@ -76,14 +78,14 @@
   padding: 20px;
   width: 4.75rem;
   min-height: 4.75rem;
-  outline: 2px solid #f2230c80;
-  box-shadow: 0 0 8px rgba(242, 35, 12, 0.5);
+  outline: 2px solid #ffa33c;
+  box-shadow: 0 0 8px rgba(#ffa33c, 0.5);
   transition: all 200ms ease-in-out;
 }
 
 .checkbox-tile:hover {
-  outline: 2px solid #f2230c80;
-  box-shadow: 0 0 8px rgba(242, 35, 12, 0.5);
+  outline: 2px solid #ffa33c;
+  box-shadow: 0 0 8px rgba(#ffa33c, 0.5);
 }
 
 
