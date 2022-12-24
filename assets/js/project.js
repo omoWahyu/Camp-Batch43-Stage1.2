@@ -49,14 +49,21 @@ function showData() {
 
   for (let i = 0; i < dataProject.length; i++) {
     listContent = document.getElementById('list-content')
+    // currentContent = document.getelementById('post-' + i )
 
     listContent.innerHTML += `
-    <div class="card card-post">
+    <div class="card card-post" id="post-${i}">
       <img src="${dataProject[i].projectImage}" alt="">
       <div class="">
         <div class="card-head">
           <h1 class="card-title__sm">${dataProject[i].projectName}</h1>
-          <span class="card-subtitle__sm">Duration ${getDuration(dataProject[i].projectStart, dataProject[i].projectEnd)}</span>
+          ${(function duration() {
+        let string = ""
+        if (dataProject[i].projectStart != "" && dataProject[i].projectEnd != "") {
+          string = `<span class="card-subtitle__sm">Duration ${getDuration(dataProject[i].projectStart, dataProject[i].projectEnd)}</span>`
+        }
+        return string
+      })()}
         </div>
         <div class="" style="height:100%;">
           <p class="card-desc_sm">${dataProject[i].projectDesc}</p>
@@ -71,7 +78,7 @@ function showData() {
             </ul>
         </div>
         <div class="btn-group" style="margin-top:24px;">
-          <a class="btn btn-primary btn-sm btn-full" href="#">Edit</a><a class="btn btn-primary btn-sm btn-full" href="#">Delete</a>
+          <a class="btn btn-primary btn-sm btn-full" href="single-project.html">Edit</a><span onclick="document.getElementById('post-${i}').remove();" class="btn btn-primary btn-sm btn-full" href="#">Delete</span>
         </div>
       </div>
     </div>
@@ -108,10 +115,16 @@ function getDuration(start, end) {
             let secondRange = Math.floor(range / (1000))
             if (secondRange != 0) {
               return secondRange + ' sec'
+            } else {
+              return 'Today'
             }
           }
         }
       }
     }
   }
+}
+
+function removeParent() {
+
 }
