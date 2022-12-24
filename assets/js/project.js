@@ -52,13 +52,13 @@ function showData() {
 
     listContent.innerHTML += `
     <div class="card card-post">
-        <img src="${dataProject[i].projectImage}" alt="">
-        <div class="card-body">
-          <div class="card-head">
-            <h1 class="card-title__sm">${dataProject[i].projectName}</h1>
-            <span class="card-subtitle__sm">Durasi: 3Bulan</span>
-          </div>
-          <div class="card-body">
+      <img src="${dataProject[i].projectImage}" alt="">
+      <div class="">
+        <div class="card-head">
+          <h1 class="card-title__sm">${dataProject[i].projectName}</h1>
+          <span class="card-subtitle__sm">Duration ${getDuration(dataProject[i].projectStart, dataProject[i].projectEnd)}</span>
+        </div>
+        <div class="" style="height:100%;">
           <p class="card-desc_sm">${dataProject[i].projectDesc}</p>
           <ul class="list-items">
             ${(function icon() {
@@ -68,10 +68,10 @@ function showData() {
         }
         return string
       })()}
-          </ul>
-        <div class="btn-group">
-          <a class="btn btn-primary btn-sm" href="#">Edit</a><a class="btn btn-outline btn-sm" href="#">Delete</a>
+            </ul>
         </div>
+        <div class="btn-group" style="margin-top:24px;">
+          <a class="btn btn-primary btn-sm btn-full" href="#">Edit</a><a class="btn btn-primary btn-sm btn-full" href="#">Delete</a>
         </div>
       </div>
     </div>
@@ -80,10 +80,38 @@ function showData() {
 }
 
 
-// function listTech(tectName) {
-//   for (let i = 0; i < tectName.length; i++) {
+function getDuration(start, end) {
+  let projectStart = new Date(start)
+  let projectEnd = new Date(end)
 
-//     ???.innerHTML += `<li><img src="assets/img/icon/logo-${tectName[i]}.svg" alt="Item Icon"></li>`
-
-//   }
-// }
+  let range = projectEnd - projectStart
+  let monthRange = Math.floor(range / (30 * 24 * 60 * 60 * 1000))
+  if (monthRange != 0) {
+    return monthRange + ' Month'
+  } else {
+    let weekRange = Math.floor(range / (7 * 24 * 60 * 60 * 1000))
+    if (weekRange != 0) {
+      return weekRange + ' Week Left'
+    } else {
+      let daysRange = Math.floor(range / (24 * 60 * 60 * 1000))
+      if (daysRange != 0) {
+        return daysRange + ' Days Left'
+      } else {
+        let hoursDistance = Math.floor(range / (60 * 60 * 1000))
+        if (hoursDistance != 0) {
+          return hoursDistance + ' Hours left'
+        } else {
+          let minutesDistance = Math.floor(range / (60 * 1000))
+          if (minutesDistance != 0) {
+            return minutesDistance + ' Minutes Left'
+          } else {
+            let secondRange = Math.floor(range / (1000))
+            if (secondRange != 0) {
+              return secondRange + ' sec'
+            }
+          }
+        }
+      }
+    }
+  }
+}

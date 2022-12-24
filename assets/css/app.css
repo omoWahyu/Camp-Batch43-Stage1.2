@@ -154,13 +154,12 @@ a {
 }
 
 .card-title__sm {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1rem;
 }
 
 .card-subtitle__sm {
-  font-size: .75rem;
+  font-size: .85rem;
   font-weight: 500;
 }
 
@@ -268,7 +267,7 @@ a {
 .btn-group {
   display: flex;
   gap: 24px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: 40px auto 0 auto;
   flex-direction: column;
 }
@@ -290,7 +289,13 @@ a {
 }
 
 .btn-sm {
-  padding: .175rem 2.5rem;
+  padding: .35rem 2.5rem;
+  /* font-size: .75rem; */
+
+}
+
+.btn-full {
+  width: 100%;
   /* font-size: .75rem; */
 
 }
