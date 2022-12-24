@@ -67,7 +67,7 @@ function showData() {
         </div>
         <div class="" style="height:100%;">
           <p class="card-desc_sm">${dataProject[i].projectDesc}</p>
-          <ul class="list-items">
+          <ul class="list-items-sm">
             ${(function icon() {
         let string = ""
         for (let j = 0; j < dataProject[i].techChecked.length; j++) {
