@@ -1,5 +1,8 @@
 # Rangkuman
 
+## CSS Hirarchy
+inline css > id > class > tag
+
 ## Variable
 
 |Var|Let|Const|
