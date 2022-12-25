@@ -1,14 +1,12 @@
 #list-content {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 20px;
 }
 
 @media (min-width: 1024px) {
   #list-content {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
   }
 }
 
@@ -18,13 +16,6 @@
   padding: 20px;
   margin: 20px;
 }
-
-@media (min-width:1024px) {
-  .card-post {
-    padding: 20px;
-  }
-}
-
 
 .card-post>img {
   width: 100%;

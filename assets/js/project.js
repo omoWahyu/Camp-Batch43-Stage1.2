@@ -56,17 +56,17 @@ function showData() {
       <img src="${dataProject[i].projectImage}" alt="">
       <div class="">
         <div class="card-head">
-          <h1 class="card-title__sm">${dataProject[i].projectName}</h1>
+          <h1 class="card-title__sm btn-link"><a href="detail-project.html">${dataProject[i].projectName}</a></h1>
           ${(function duration() {
         let string = ""
         if (dataProject[i].projectStart != "" && dataProject[i].projectEnd != "") {
-          string = `<span class="card-subtitle__sm">Duration ${getDuration(dataProject[i].projectStart, dataProject[i].projectEnd)}</span>`
+          string = `<span class="card-subtitle__sm">${getDuration(dataProject[i].projectStart, dataProject[i].projectEnd)}</span>`
         }
         return string
       })()}
         </div>
         <div class="" style="height:100%;">
-          <p class="card-desc_sm">${dataProject[i].projectDesc}</p>
+          <p class="card-desc__sm">${dataProject[i].projectDesc}</p>
           <ul class="list-items-sm">
             ${(function icon() {
         let string = ""
@@ -91,41 +91,29 @@ function showData() {
 function getDuration(start, end) {
   let projectStart = new Date(start)
   let projectEnd = new Date(end)
-
   let range = projectEnd - projectStart
   let monthRange = Math.floor(range / (30 * 24 * 60 * 60 * 1000))
-  if (monthRange != 0) {
-    return monthRange + ' Month'
+  if (monthRange < 0) {
+    return ''
+  }
+  if (monthRange > 0) {
+    return 'Duration : ' + monthRange + ' Month'
   } else {
     let weekRange = Math.floor(range / (7 * 24 * 60 * 60 * 1000))
     if (weekRange != 0) {
-      return weekRange + ' Week Left'
+      return 'Duration : ' + weekRange + ' Week Left'
     } else {
-      let daysRange = Math.floor(range / (24 * 60 * 60 * 1000))
-      if (daysRange != 0) {
-        return daysRange + ' Days Left'
+      let weekRange = Math.floor(range / (7 * 24 * 60 * 60 * 1000))
+      if (weekRange != 0) {
+        return 'Duration : ' + weekRange + ' Week Left'
       } else {
-        let hoursDistance = Math.floor(range / (60 * 60 * 1000))
-        if (hoursDistance != 0) {
-          return hoursDistance + ' Hours left'
+        let daysRange = Math.floor(range / (24 * 60 * 60 * 1000))
+        if (daysRange != 0) {
+          return 'Duration : ' + daysRange + ' Days Left'
         } else {
-          let minutesDistance = Math.floor(range / (60 * 1000))
-          if (minutesDistance != 0) {
-            return minutesDistance + ' Minutes Left'
-          } else {
-            let secondRange = Math.floor(range / (1000))
-            if (secondRange != 0) {
-              return secondRange + ' sec'
-            } else {
-              return 'Today'
-            }
-          }
+          return 'Duration : Today'
         }
       }
     }
   }
-}
-
-function removeParent() {
-
 }

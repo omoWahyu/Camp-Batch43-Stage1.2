@@ -6,6 +6,7 @@
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -185,6 +186,17 @@ a {
   transition: all 500ms ease-in-out;
 }
 
+.card-desc {
+  text-align: justify;
+  font-size: 1.15rem;
+  line-height: 2.25rem;
+}
+
+.card-desc__sm {
+  text-align: justify;
+  font-size: 1.15rem;
+}
+
 .card-body__split {
   display: flex;
   flex-direction: column;
@@ -223,11 +235,7 @@ a {
     width: fit-content;
   }
 
-  .card-desc {
-    text-align: justify;
-    font-size: 1.15rem;
-    line-height: 2.25rem;
-  }
+
 }
 
 /* Card - Responsive Media */
@@ -334,6 +342,14 @@ a {
   color: var(--tertary);
   border: .5px solid var(--primary);
   font-weight: 600;
+}
+
+.btn-link:hover {
+  transition: all 200ms ease-in-out;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
 }
 
 .btn-active {
@@ -504,6 +520,7 @@ textarea {
   background-color: #f7f7f7;
   resize: vertical;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition: all 200ms ease-in-out;
 }
 
 .form-input>input:hover,
