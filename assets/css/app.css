@@ -17,12 +17,14 @@ a {
 
 :root {
   /* Colors */
-  --primary: #000;
-  --sub-primary: #fff;
+  --primary: #ffa33c;
+  --sub-primary: #000;
   --secondary: #fe4e30;
   --sub-secondary: #000;
-  --tertiary: #000;
-  --sub-tertiary: #000;
+  --tertary: #000;
+  --sub-tertiary: #fff;
+  --danger: #ff003c;
+  --sub-danger: #fff;
 }
 
 
@@ -126,8 +128,15 @@ a {
 
 /* --- Container Stop --- */
 
-.shadow-lg {
-  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.35);
+/* .shadow-lg {
+  box-shadow: none;
+} */
+
+@media (min-width:1024px) {
+
+  .shadow-lg {
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.35);
+  }
 }
 
 .card-fit {
@@ -201,10 +210,6 @@ a {
     padding: 2.75rem;
   }
 
-  .card-body {
-    /* border-radius: 24px; */
-  }
-
   .card-body__split {
     flex-direction: row;
   }
@@ -256,12 +261,15 @@ a {
 
 
 /* --- Button Start --- */
+.mx-auto {
+  margin: 0 auto;
+}
+
 .btn-group {
   display: flex;
-  gap: 24px;
+  gap: 12px;
   /* flex-wrap: wrap; */
-  margin: 40px auto 0 auto;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .btn {
@@ -275,6 +283,11 @@ a {
   cursor: pointer;
 }
 
+.btn:hover {
+  transform: translateY(-.2rem) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
 .btn-lg {
   padding: .75rem 3rem;
 
@@ -282,14 +295,10 @@ a {
 
 .btn-sm {
   padding: .35rem 2.5rem;
-  /* font-size: .75rem; */
-
 }
 
 .btn-full {
   width: 100%;
-  /* font-size: .75rem; */
-
 }
 
 .btn-icon {
@@ -299,16 +308,31 @@ a {
 }
 
 .btn-primary {
-  background-color: var(--primary);
-  color: var(--sub-primary);
+  background-color: var(--tertary);
+  color: var(--sub-tertiary);
   border: .5px solid #000;
   font-weight: 600;
 }
 
+.btn-danger {
+  background-color: var(--tertary);
+  color: var(--sub-tertiary);
+  border: .5px solid #000;
+  font-weight: 600;
+}
+
+.btn-danger:hover {
+  background-color: var(--danger);
+  color: var(--sub-danger);
+  border: .5px solid var(--danger);
+  font-weight: 600;
+}
+
+
 .btn-primary:hover {
-  background-color: #ffa33c;
-  color: var(--primary);
-  border: .5px solid #ffa33c;
+  background-color: var(--primary);
+  color: var(--tertary);
+  border: .5px solid var(--primary);
   font-weight: 600;
 }
 
@@ -321,14 +345,14 @@ a {
 
 .btn-transparent {
   gap: 12px;
-  color: var(--primary);
+  color: var(--tertary);
   background-color: transparent;
   border: .5px solid rgba(0, 0, 0, 0);
 }
 
 .btn-transparent:hover {
-  background-color: var(--primary);
-  color: var(--sub-primary);
+  background-color: var(--tertary);
+  color: var(--sub-tertiary);
   border-radius: 99rem;
   border: .5px solid #000;
 }
@@ -348,7 +372,7 @@ a {
 
   .btn-group {
     margin: 40px 0 0 0;
-    flex-direction: unset;
+    flex-direction: row;
   }
 }
 
@@ -368,11 +392,17 @@ a {
 .social-icon {
   padding: 8px;
   border-radius: 99rem;
-  background-color: var(--primary);
-  color: var(--sub-primary);
+  background-color: var(--tertary);
+  color: var(--sub-tertiary);
   text-decoration: none;
   display: inline-flex;
   border: .5px solid #000;
+  transition: all 200ms ease-in-out;
+}
+
+.social-icon:hover {
+  transform: translateY(-.3rem) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .social-icon:hover {
@@ -465,9 +495,11 @@ a {
 .form-input>input,
 select,
 textarea {
+  color: #262626;
+  font-weight: 500;
   padding: .5rem 1rem;
-  border-radius: 8px;
-  border: 2px solid rgb(223, 223, 223);
+  border-radius: 12px;
+  border: 1px solid rgb(223, 223, 223);
   /* border: none; */
   background-color: #f7f7f7;
   resize: vertical;
@@ -477,18 +509,63 @@ textarea {
 .form-input>input:hover,
 select:hover,
 textarea:hover {
-  border: 2px solid #000;
+  border: 1px solid var(--primary);
 }
 
 .form-input>input:focus,
 select:focus,
 textarea:focus {
-  background-color: #ffd8d1;
+  background-color: #e9e7e3;
+  outline: 1px solid var(--primary);
+}
+
+.form-input>input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  font-weight: 500;
 }
 
 .form-input>input {
   height: 32px;
 }
+
+.form-input>input[type="file"] {
+  padding: 0 16px 0 0;
+  height: 48px;
+}
+
+.form-input>input[type="file"]:hover {
+  padding: 0 16px 0 0;
+  height: 48px;
+  cursor: pointer;
+}
+
+.form-input>input[type="file"]:focus {
+  background-color: #e9e7e3;
+}
+
+.form-input>input[type="file"]::file-selector-button {
+  height: 100%;
+  border: 0;
+  padding: 0 24px;
+  margin-right: 16px;
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+}
+
+.form-input>input[type="file"]::file-selector-button:hover {
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+/* input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: 8px;
+  font-size: 17px;
+  color: #b8b8b8;
+} */
 
 .form-input>select {
   height: 48px;

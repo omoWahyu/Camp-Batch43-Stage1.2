@@ -78,7 +78,8 @@ function showData() {
             </ul>
         </div>
         <div class="btn-group" style="margin-top:24px;">
-          <a class="btn btn-primary btn-sm btn-full" href="single-project.html">Edit</a><span onclick="document.getElementById('post-${i}').remove();" class="btn btn-primary btn-sm btn-full" href="#">Delete</span>
+          <a class="btn btn-primary btn-sm btn-full" href="single-project.html">Edit</a>
+          <span onclick="document.getElementById('post-${i}').remove();" class="btn btn-danger btn-sm btn-full" >Delete</span>
         </div>
       </div>
     </div>
