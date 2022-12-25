@@ -62,7 +62,7 @@ a {
 
 .header {
   width: 100%;
-  padding: 20px 0;
+  padding: 32px 0;
   position: fixed;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.8);
@@ -95,6 +95,7 @@ a {
 .header-nav__left {
   gap: 24px;
   font-size: 1rem;
+  margin-left: 24px;
 }
 
 .header-nav__left>li {
@@ -518,7 +519,6 @@ textarea {
   border: 1px solid rgb(223, 223, 223);
   /* border: none; */
   background-color: #f7f7f7;
-  resize: vertical;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   transition: all 200ms ease-in-out;
 }
@@ -589,6 +589,7 @@ textarea::placeholder {
 }
 
 .form-input>textarea {
+  resize: vertical;
   padding: 1rem;
 }
 
